@@ -1,7 +1,6 @@
 from random import *
 
-from cards.card import RegularCard, RoyaltyCard
-from cards.royalty import Royalty
+from cards.card import Card
 from cards.suit import Suit
 
 
@@ -9,11 +8,8 @@ class Deck:
     def __init__(self):
         self.cards = []
         for s in Suit:
-            for i in range(1, 12):
-                self.cards.append(RegularCard(s, i))
-            for x in Royalty:
-                self.cards.append(RoyaltyCard(s, x))
-
+            for i in range(2, 15):
+                self.cards.append(Card(s, i))
 
     def deal(self, how_many):
         dealt_cards = []
