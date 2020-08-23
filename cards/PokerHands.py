@@ -4,10 +4,6 @@ from cards.util.contiguous import contiguous_cards
 from cards.suit import Suit
 
 
-def is_straight(cards):
-    return contiguous_cards(cards, 5)
-
-
 def is_straight_flush(cards):
     number_suit = {}
     for s in Suit:
