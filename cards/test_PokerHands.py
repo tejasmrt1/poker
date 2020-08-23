@@ -69,3 +69,14 @@ class TestPokerHands(TestCase):
             Card(Suit.Spade, 4),
             Card(Suit.Heart, 10)
         ]))
+
+    def test_is_not_two_pair(self):
+        self.assertFalse(is_two_pair([
+            Card(Suit.Heart, Royalty.Ace.value),
+            Card(Suit.Heart, 2),
+            Card(Suit.Heart, 5),
+            Card(Suit.Diamond, 7),
+            Card(Suit.Clover, 9),
+            Card(Suit.Spade, Royalty.Jack.value),
+            Card(Suit.Spade, 5)
+        ]))
