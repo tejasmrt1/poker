@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from cards.hands.RoyalFlush import isRoyalFlush
 from cards.card import Card
+from cards.hands.TwoPair import is_two_pair
 from cards.royalty import Royalty
 from cards.suit import Suit
 from cards.handsl.Straight import is_straight
@@ -56,4 +57,15 @@ class TestPokerHands(TestCase):
             Card(Suit.Clover, 9),
             Card(Suit.Spade, Royalty.Jack.value),
             Card(Suit.Spade, 5)
+        ]))
+
+    def test_is_two_pair1(self):
+        self.assertTrue(is_two_pair([
+            Card(Suit.Heart, Royalty.Ace.value),
+            Card(Suit.Heart, 6),
+            Card(Suit.Heart, 4),
+            Card(Suit.Heart, 5),
+            Card(Suit.Clover, 5),
+            Card(Suit.Spade, 4),
+            Card(Suit.Heart, 10)
         ]))
