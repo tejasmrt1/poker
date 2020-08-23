@@ -19,10 +19,3 @@ class Deck:
             dealt_cards.append(card)
         return dealt_cards
 
-
-
-
-
-d = Deck()
-dealt_cards = d.deal(5)
-print(dealt_cards)
