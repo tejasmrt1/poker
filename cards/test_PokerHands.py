@@ -5,7 +5,7 @@ from cards.card import Card
 from cards.hands.TwoPair import is_two_pair
 from cards.royalty import Royalty
 from cards.suit import Suit
-from cards.handsl.Straight import is_straight
+from cards.hands.Straight import is_straight
 
 
 class TestPokerHands(TestCase):
